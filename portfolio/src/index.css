@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B0F14;
+  --surface: #111827;
+  --accent: #38BDF8;   /* cyan-blue */
+  --accent2: #6366F1;  /* indigo */
+}
+
+body {
+  background-color: var(--bg);
+  color: #E5E7EB;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+
+h1, h2, h3 {
+  @apply text-white;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #38BDF8, #6366F1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow {
+  box-shadow: 0 0 0 transparent;
+}
+
+.glow:hover {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+/* Backgrounds */
+.bg-bg {
+  background-color: var(--bg);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+/* Text colors */
+.text-accent {
+  color: var(--accent);
+}
+
+/* Borders */
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* Gradients */
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
+}
+
+/* Chess grid hint */
+.chess-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Chess annotation style */
+.chess-annotation {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+}
+
+/* Soft move highlight */
+.move-highlight {
+  position: relative;
+}
+
+.move-highlight::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+
+.tactical-board {
+  background-color: #0a0a0a;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  /* This creates a blueprint/grid feel that mimics a board */
+}
+
